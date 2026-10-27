@@ -183,7 +183,7 @@
 **② CVE 무작위 5건 웹사이트 대조 (본인 수행)**
 - 분석 기간에서 무작위로 5건을 뽑아 CISA KEV 웹사이트의 추가일·제조사와 CSV를 대조
 - 대상: CVE-2023-41974, CVE-2023-42793, CVE-2024-29748, CVE-2025-59689, CVE-2026-42018
-- 결과: ✏️
+- 결과: 5건 모두 추가일·제조사가 CSV와 일치함
 
 **③ 연도별 건수 독립 재계산 (Claude 수행, 본인 검토)**
 - pandas를 쓰지 않고 파이썬 기본 csv 모듈로 1\~9월 건수를 따로 계산
@@ -203,8 +203,6 @@
 ## 8. 부록
 
 ### 8-1. 로컬 실행 화면
-https://github.com/user-attachments/assets/7b2647af-3c27-4aa1-bec4-35b83fef6314
-
 <details>
 
 <summary>Terminal 기록</summary>
@@ -274,78 +272,49 @@ dtype: float64
 2025  4.71  2.97   13
 2026  6.42  3.45   14
 
-== 경계 장비 분류 ==
-제조사 기준: 176 건 → 비경계 제품 제외 후: 144 건
-제외된 제품:
- product
-Endpoint Manager Mobile (EPMM)                        7
-Endpoint Manager (EPM)                                4
-FortiClient EMS                                       3
-Expedition                                            3
-Unified Communications Manager                        2
-Session Recording                                     2
-DCS-2530L and DCS-2670L Devices                       2
-Multiple NAS Devices                                  2
- Endpoint Manager (EPM)                               1
-DNR-322L                                              1
-Smart Licensing Utility                               1
-Endpoint Manager Cloud Service Appliance (EPM CSA)    1
-Endpoint Manager Mobile (EPMM) and MobileIron Core    1
-Content Collaboration                                 1
-Multiple Network-Attached Storage (NAS) Devices       1
-Name: count, dtype: int64
-
-== 연도별 비중 비교(%): 제조사 기준 vs 보정 후 ==
-       vendor_only  corrected
-year                        
-2023         17.1       15.0
-2024         22.6       17.7
-2025         21.6       17.1
-2026         19.9       16.7
-
 == 분기별 경계 장비 비중 ==
           total  edge  share  share_ma
 quarter                              
 2023Q1      37     1    2.7       NaN
-2023Q2      60    10   16.7       NaN
-2023Q3      43     5   11.6       NaN
-2023Q4      47    12   25.5      14.1
-2024Q1      40     8   20.0      18.5
-2024Q2      33     6   18.2      18.8
-2024Q3      58     9   15.5      19.8
-2024Q4      55    10   18.2      18.0
-2025Q1      73    13   17.8      17.4
-2025Q2      59     9   15.3      16.7
-2025Q3      51    11   21.6      18.2
-2025Q4      62     9   14.5      17.3
-2026Q1      71     6    8.5      14.9
-2026Q2      75    11   14.7      14.8
-2026Q3     100    24   24.0      15.4
+2023Q2      60    11   18.3       NaN
+2023Q3      43     8   18.6       NaN
+2023Q4      47    12   25.5      16.3
+2024Q1      40    11   27.5      22.5
+2024Q2      33     8   24.2      24.0
+2024Q3      58     9   15.5      23.2
+2024Q4      55    14   25.5      23.2
+2025Q1      73    17   23.3      22.1
+2025Q2      59    11   18.6      20.7
+2025Q3      51    16   31.4      24.7
+2025Q4      62     9   14.5      22.0
+2026Q1      71     9   12.7      19.3
+2026Q2      75    16   21.3      20.0
+2026Q3     100    24   24.0      18.1
 
 == 연도별 경계 장비 비중(%) ==
  year
-2023    15.0
-2024    17.7
-2025    17.1
-2026    16.7
+2023    17.1
+2024    22.6
+2025    21.6
+2026    19.9
 Name: edge, dtype: float64
 
 == 전년 대비 %p 변화 ==
  year
 2023    NaN
-2024    2.8
-2025   -0.6
-2026   -0.5
+2024    5.5
+2025   -0.9
+2026   -1.7
 Name: edge, dtype: float64
 
 == 경계 장비 중 제조사 상위 ==
  vendorProject
-Cisco        36
-Fortinet     18
-Citrix       12
-Ivanti       12
-SonicWall    10
-Zyxel         9
+Cisco                 39
+Ivanti                26
+Fortinet              21
+Citrix                15
+D-Link                14
+Palo Alto Networks    11
 Name: count, dtype: int64
 
 == 연도별 CWE 비어 있는 비율 ==
@@ -383,7 +352,7 @@ CWE-306   3.2   2.7   2.4   4.9
 
 </details>
 
-https://github.com/user-attachments/assets/efaf3fef-4027-47e6-b856-83a30b07a430
+https://github.com/user-attachments/assets/f0cd5ead-d71f-4d0d-8a31-b7e5a90dc6ad
 
 ### 8-2. 실행 방법
 ```bash
