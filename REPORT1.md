@@ -40,7 +40,7 @@
 - 판단
   <br>: 2021\~2022년은 "새로 악용된 취약점"이 아니라 **과거 취약점을 목록에 채워 넣은 구간**이므로, 추세 분석에서 제외했습니다.</br>
 
-![연도별 신규 취약점 비율](images/00_data_quality_age.png)
+<img width="1200" height="600" alt="image" src="https://github.com/user-attachments/assets/6000e722-dea5-47ad-84cc-71f29e529d05" />
 
 **결측치**
 - `cwes`(취약점 유형) 컬럼만 결측이 있습니다: 전체 175건, 분석 기간 내 연도별 3.7\~11.8%.
@@ -69,7 +69,7 @@
 
 ### 4-1. 질문 1: 추가 속도는 빨라지고 있는가
 
-![주별 추가 건수](images/01_weekly_trend.png)
+<img width="1650" height="675" alt="image" src="https://github.com/user-attachments/assets/ecc2cab3-39dd-42cf-8a16-e35af1d3188e" />
 
 | 연도 | 1\~9월 건수 | 전년 대비 | 주 평균 | 주 표준편차 | 주 최대 |
 |---|---|---|---|---|---|
@@ -83,7 +83,7 @@
 
 ### 4-2. 질문 2: 네트워크 경계 장비의 비중
 
-![경계 장비 비중](images/02_edge_device_share.png)
+<img width="1650" height="675" alt="image" src="https://github.com/user-attachments/assets/a11ace3d-2e45-410a-b921-df67e7541ad4" />
 
 | 연도 | 경계 장비 비중 | 전년 대비 | (참고) 제조사 기준만 적용 시 |
 |---|---|---|---|
@@ -99,7 +99,7 @@
 
 ### 4-3. 질문 3: 반복되는 유형과 달라진 유형
 
-![CWE 히트맵](images/03_cwe_heatmap.png)
+<img width="1350" height="750" alt="image" src="https://github.com/user-attachments/assets/07f71702-e1e7-470d-8b70-8ba6c5945f5f" />
 
 - **꾸준히 상위**
   <br>: OS 명령어 인젝션(CWE-78)은 4년 내내 5\~7.5%, 역직렬화(CWE-502)는 4.3% → 5\~6%대.</br>
@@ -203,6 +203,8 @@
 ## 8. 부록
 
 ### 8-1. 로컬 실행 화면
+https://github.com/user-attachments/assets/7b2647af-3c27-4aa1-bec4-35b83fef6314
+
 <details>
 
 <summary>Terminal 기록</summary>
