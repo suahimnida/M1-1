@@ -250,6 +250,7 @@ Name: age, dtype: float64
 2025    245
 2026    246
 dtype: int64
+
 == 1~9월 기준 건수 ==
  year
 2023    140
@@ -257,6 +258,7 @@ dtype: int64
 2025    183
 2026    246
 dtype: int64
+
 == 1~9월 기준 전년 대비 변화율(%) ==
  year
 2023     NaN
@@ -264,6 +266,7 @@ dtype: int64
 2025    39.7
 2026    34.4
 dtype: float64
+
 == 연도별 주간 통계(평균/표준편차/최대) ==
        mean   std  max
 2023  3.67  2.91   12
@@ -291,6 +294,7 @@ Endpoint Manager Mobile (EPMM) and MobileIron Core    1
 Content Collaboration                                 1
 Multiple Network-Attached Storage (NAS) Devices       1
 Name: count, dtype: int64
+
 == 연도별 비중 비교(%): 제조사 기준 vs 보정 후 ==
        vendor_only  corrected
 year                        
@@ -317,6 +321,7 @@ quarter
 2026Q1      71     6    8.5      14.9
 2026Q2      75    11   14.7      14.8
 2026Q3     100    24   24.0      15.4
+
 == 연도별 경계 장비 비중(%) ==
  year
 2023    15.0
@@ -324,6 +329,7 @@ quarter
 2025    17.1
 2026    16.7
 Name: edge, dtype: float64
+
 == 전년 대비 %p 변화 ==
  year
 2023    NaN
@@ -331,6 +337,7 @@ Name: edge, dtype: float64
 2025   -0.6
 2026   -0.5
 Name: edge, dtype: float64
+
 == 경계 장비 중 제조사 상위 ==
  vendorProject
 Cisco        36
@@ -359,6 +366,7 @@ CWE-22      4     9    13    11
 CWE-787     9     7    11     9
 CWE-287     5     9     6    16
 CWE-306     6     5     6    12
+
 == 상위 CWE 연도별 비율(%) ==
           2023  2024  2025  2026
 CWE-78    7.5   7.5   7.3   5.3
@@ -382,4 +390,3 @@ https://github.com/user-attachments/assets/efaf3fef-4027-47e6-b856-83a30b07a430
 pip install -r requirements.txt
 python analysis.py
 ```
-실행하면 `images/`에 그래프 4개가 저장되고, 리포트에 쓴 수치가 콘솔에 출력됩니다.
